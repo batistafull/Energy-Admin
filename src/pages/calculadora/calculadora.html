@@ -1,0 +1,32 @@
+<ion-header>
+
+  <ion-navbar color="purpli">
+    <ion-title>calculadora</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding style="background:url('../../assets/fondo1.png')">
+    <ion-list>
+        
+          <ion-item>
+            <ion-label floating>W</ion-label>
+            <ion-input type="number" [(ngModel)]="w"></ion-input>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label floating>M2</ion-label>
+            <ion-input type="number" [(ngModel)]="m"></ion-input>
+          </ion-item>
+
+          <ion-item>
+              <ion-label floating>Lux</ion-label>
+              <ion-input type="number" [(ngModel)]="lux"></ion-input>
+            </ion-item>
+        </ion-list>
+        <button ion-button color="purpli" (tap)="resultado()" full>Calcular</button>
+        <div style="width:150px;height:150px;border-radius:150px;background-color:#f53d3d;margin: 0 auto" color="purpli">
+         <br><br> <h1 text-center style="color:white;">{{res | number:'1.2-2'}}</h1>
+        </div>
+</ion-content>

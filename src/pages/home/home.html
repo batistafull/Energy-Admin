@@ -1,20 +1,35 @@
-<ion-header>
-  <ion-navbar color="dark">
-    <ion-title>
-      Energy Admin
-    </ion-title>
-  </ion-navbar>
-</ion-header>
 
-<ion-content padding>
+
+<ion-content style="background:url('../../assets/fondo1.png')" class="card-background-page">
+  <ion-card>
+    <img src="../assets/ip.jpg"/>
+    <div class="card-title">Energy Admin</div>
+  </ion-card>
     <ion-grid>
         <ion-row>
-          <ion-col col-4><button ion-fab><ion-icon name="ios-sunny-outline"></ion-icon></button>Iliminacion</ion-col>
-          <ion-col col-4><button ion-fab><ion-icon name="ios-snow-outline"></ion-icon></button></ion-col>
-          <ion-col col-4><button ion-fab><ion-icon name="ios-thermometer-outline"></ion-icon></button></ion-col>
+          <ion-col col-4 text-center><button ion-button  full color="purpli"><ion-icon name="ios-sunny-outline"></ion-icon></button>Iliminacion</ion-col>
+          <ion-col col-4 text-center><button ion-button full color="purpli"><ion-icon name="ios-snow-outline"></ion-icon></button>Refrigeracion</ion-col>
+          <ion-col col-4 text-center><button ion-button full color="purpli"><ion-icon name="ios-thermometer-outline"></ion-icon></button>Climatizacion</ion-col>
       </ion-row>
-      </ion-grid>
+    </ion-grid>
   
-  
-  
+    <ion-card>
+        <img src="../../assets/bgh.jpg"/>
+        <ion-card-content>
+          <button ion-button full color="danger" (tap)="presentActionSheet()">NIVELES</button>
+        </ion-card-content>
+      </ion-card>
 </ion-content>
+
+<ion-footer>
+    <div>
+        <ion-segment [(ngModel)]="menu">
+          <ion-segment-button value="home">
+            Inicio
+          </ion-segment-button>
+          <ion-segment-button value="calc" (tap)="calc()">
+            Calculadora
+          </ion-segment-button>
+        </ion-segment>
+      </div>
+</ion-footer>
