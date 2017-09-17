@@ -7,22 +7,28 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { CalculadoraPage } from '../pages/calculadora/calculadora';
+import { NivelesPage } from '../pages/niveles/niveles';
+import { ChartsModule } from 'ng2-charts';
+
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    CalculadoraPage
+    CalculadoraPage,
+    NivelesPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    ChartsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
-    CalculadoraPage
+    CalculadoraPage,
+    NivelesPage
   ],
   providers: [
     StatusBar,

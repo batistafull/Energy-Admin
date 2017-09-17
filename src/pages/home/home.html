@@ -1,35 +1,26 @@
 
+<ion-header>
+    <ion-toolbar color="verde">
+      <ion-buttons start>
+        <button ion-button icon-only style="color:#fff" (click)="calc()">
+          <ion-icon name="md-calculator"></ion-icon>
+        </button>
+      </ion-buttons>
+      <ion-title>Energy Admin</ion-title>
+    </ion-toolbar>
+  </ion-header>
 
 <ion-content style="background:url('./assets/imagen/fondo1.png')" class="card-background-page">
-  <ion-card>
-    <img src="./assets/imagen/ip.jpg"/>
-    <div class="card-title">Energy Admin</div>
-  </ion-card>
     <ion-grid>
         <ion-row>
-          <ion-col col-4 text-center><button ion-button  full color="purpli"><ion-icon name="ios-sunny-outline"></ion-icon></button>Iliminacion</ion-col>
-          <ion-col col-4 text-center><button ion-button full color="purpli"><ion-icon name="ios-snow-outline"></ion-icon></button>Refrigeracion</ion-col>
-          <ion-col col-4 text-center><button ion-button full color="purpli"><ion-icon name="ios-thermometer-outline"></ion-icon></button>Climatizacion</ion-col>
+          <ion-col col-12 text-center><ion-icon name="ios-sunny-outline"></ion-icon><br />Iliminacion</ion-col><br />
+          <ion-col col-12 text-center><ion-icon name="ios-snow-outline"></ion-icon><br />Refrigeracion</ion-col><br />
+          <ion-col col-12 text-center><ion-icon name="ios-thermometer-outline"></ion-icon><br />Climatizacion</ion-col><br />
       </ion-row>
     </ion-grid>
   
-    <ion-card>
-        <img src="./assets/imagen/bgh.jpg"/>
-        <ion-card-content>
-          <button ion-button full color="danger" (tap)="presentActionSheet()">NIVELES</button>
-        </ion-card-content>
-      </ion-card>
+<div padding>
+  <h1 text-center color="gris">Consumos</h1>
+  <button ion-button color="naranja" full *ngFor="let i of [1,2,3,4]" (click)="nivel(i)">Nivel {{i}}</button>
+</div>
 </ion-content>
-
-<ion-footer>
-    <div>
-        <ion-segment [(ngModel)]="menu">
-          <ion-segment-button value="home">
-            Inicio
-          </ion-segment-button>
-          <ion-segment-button value="calc" (tap)="calc()">
-            Calculadora
-          </ion-segment-button>
-        </ion-segment>
-      </div>
-</ion-footer>

@@ -8,30 +8,45 @@ import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angu
   templateUrl: 'calculadora.html',
 })
 export class CalculadoraPage {
+  unidad;
   w;
-  m;
+  e;
   lux;
-  res;
-  res1;
-  res2;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl:ToastController) {
+  final;
+  constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController) {
+    this.w='';
+    this.e='';
+    this.lux='';
   }
-
+resultado(res){
+    this.unidad=res;
+    document.getElementById('w').style.color="#000";
+    document.getElementById('e').style.color="#000";
+    document.getElementById('lux').style.color="#000";
+    document.getElementById(res).style.color="#00eca8";
+}
+clear(res){
+if(this.unidad=='w'){
+  this.w='';
+}else if(this.unidad=='e'){
+  this.e='';
+}else if(this.unidad=='lux'){
+  this.lux='';
+}
+}
+numero(numero){
+  if(this.unidad=='w'){
+    this.w=this.w+''+numero;
+  }else if(this.unidad=='e'){
+    this.e=this.e+''+numero;
+  }else if(this.unidad=='lux'){
+    this.lux=this.lux+''+numero;
+  }
+}
+finaly(){
+  this.final=(this.w*100)/(this.e*this.lux)
+}
   ionViewDidLoad() {
     console.log('ionViewDidLoad CalculadoraPage');
-  }
-  resultado(){
-    if(this.w && this.m && this.lux){
-    this.res1 = this.w*100;
-    this.res2 = this.m*this.lux;
-    this.res = this.res1/this.res2;
-    }else{
-      let toast = this.toastCtrl.create({
-        message: 'Debes llenar todo los campos',
-        duration: 3000
-      });
-      toast.present();
-    }
-    
   }
 }

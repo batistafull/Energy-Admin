@@ -24,5 +24,18 @@ page-home {
           }
         
         }
+        ion-grid{
+          ion-row{
+            ion-col{
+              font-size:30px;
+              border: 1px solid #222;
+              border-radius: 10px;
+              color: #FF6900;
+              ion-icon{
+                font-size:90px;
+              }
+            }
+          }
+        }
     
 }

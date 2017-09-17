@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController, ActionSheetController,ModalController  } from 'ionic-angular';
+import { NavController, ActionSheetController  } from 'ionic-angular';
 import { CalculadoraPage } from "../calculadora/calculadora";
+import { NivelesPage } from "../niveles/niveles";
 
 @Component({
   selector: 'page-home',
@@ -9,47 +10,13 @@ import { CalculadoraPage } from "../calculadora/calculadora";
 export class HomePage {
 
   constructor(public navCtrl: NavController,
-  public actionSheetCtrl:ActionSheetController,
-public modalCtrl: ModalController) {
+  public actionSheetCtrl:ActionSheetController) {
 
   }
-  presentActionSheet() {
-    let actionSheet = this.actionSheetCtrl.create({
-      title: 'Niveles',
-      buttons: [
-        {
-          text: 'Nivel 1',
-          handler: () => {
-            console.log('Destructive clicked');
-          }
-        },{
-          text: 'Nivel 2',
-          handler: () => {
-            console.log('Archive clicked');
-          }
-        },{
-          text: 'Nivel 3',
-          handler: () => {
-            console.log('Archive clicked');
-          }
-        },{
-          text: 'Nivel 4',
-          handler: () => {
-            console.log('Archive clicked');
-          }
-        },{
-          text: 'Cancel',
-          role: 'cancel',
-          handler: () => {
-            console.log('Cancel clicked');
-          }
-        }
-      ]
-    });
-    actionSheet.present();
+  nivel(n){
+      this.navCtrl.push(NivelesPage,{nivel:n})
   }
 calc(){
- let modal = this.modalCtrl.create(CalculadoraPage);
-  modal.present();
+ this.navCtrl.push(CalculadoraPage);
 }
 }

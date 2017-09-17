@@ -1,0 +1,34 @@
+
+<ion-header>
+
+  <ion-navbar color="verde">
+    <ion-title>niveles</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h1 text-center color="naranja">Consumo Total Nivel {{nivel}}</h1>
+    <div style="display: block;width:100%">
+        <canvas style="width:100%" baseChart
+                    [data]="doughnutChartData"
+                    [labels]="doughnutChartLabels"
+                    [chartType]="doughnutChartType"
+                    (chartHover)="chartHovered($event)"
+                    (chartClick)="chartClicked($event)"></canvas>
+      </div> 
+      <br><br>
+<h1 text-center color="naranja">Consumo Mensual</h1>
+      <div style="display: block;width:100%">
+        <canvas style="width:100%" baseChart
+                [datasets]="barChartData"
+                [labels]="barChartLabels"
+                [options]="barChartOptions"
+                [legend]="barChartLegend"
+                [chartType]="barChartType"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)"></canvas>
+      </div>
+
+</ion-content>
