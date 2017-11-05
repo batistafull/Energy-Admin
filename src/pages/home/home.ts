@@ -19,4 +19,5 @@ export class HomePage {
 calc(){
  this.navCtrl.push(CalculadoraPage);
 }
+
 }

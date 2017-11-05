@@ -8,14 +8,14 @@
 
 <ion-content padding style="background:url('../assets/imagen/fondo1.png')">
   <div style="width:100%;height:150px;background-color:#eee;border:1px solid #888;color:#333;">
-<span style="font-size:18px;margin:13px">W={{w}}; E={{e}}; LUX={{lux}};</span><br />
-<span style="font-size:42px;margin:20px">{{final | number:'1.2-2'}}</span>
+<span style="font-size:18px;margin:13px">W={{w}}; M2={{e}}; LUX={{lux}};</span><br />
+<span style="font-size:42px;margin:20px">{{final | number:'1.2-2'}}<span style="font-size:18px;margin:13px">IIE</span></span>
   </div>
   <br /><br/>
     <ion-grid text-center>
         <ion-row>
             <ion-col col-4 (click)="resultado('w')" id="w">W</ion-col>
-            <ion-col col-4 (click)="resultado('e')" id="e">E2</ion-col>
+            <ion-col col-4 (click)="resultado('e')" id="e">M2</ion-col>
             <ion-col col-4 (click)="resultado('lux')" id="lux">LUX</ion-col>
       </ion-row>
           <ion-row *ngFor="let row of [0,3,6]">
@@ -24,7 +24,11 @@
           <ion-row>
               <ion-col col-4 (click)="clear(unidad)">C</ion-col>
               <ion-col col-4 (click)="numero(0)">0</ion-col>
-              <ion-col col-4 (click)="finaly()">=</ion-col>
-            </ion-row> 
+              <ion-col col-4 (click)="clearAll()"><ion-icon name="arrow-round-back"></ion-icon></ion-col>
+          </ion-row> 
+          <ion-row>
+            <ion-col col-12 (click)="finaly()">=</ion-col>
+          </ion-row>
+      
     </ion-grid>
 </ion-content>

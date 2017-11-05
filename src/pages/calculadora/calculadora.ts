@@ -17,6 +17,7 @@ export class CalculadoraPage {
     this.w='';
     this.e='';
     this.lux='';
+    this.final=0;
   }
 resultado(res){
     this.unidad=res;
@@ -42,6 +43,12 @@ numero(numero){
   }else if(this.unidad=='lux'){
     this.lux=this.lux+''+numero;
   }
+}
+clearAll(){
+  this.w='';
+  this.e='';
+  this.lux='';
+  this.final=0;
 }
 finaly(){
   this.final=(this.w*100)/(this.e*this.lux)

@@ -13,14 +13,14 @@
 <ion-content style="background:url('./assets/imagen/fondo1.png')" class="card-background-page">
     <ion-grid>
         <ion-row>
-          <ion-col col-12 text-center><ion-icon name="ios-sunny-outline"></ion-icon><br />Iliminacion</ion-col><br />
-          <ion-col col-12 text-center><ion-icon name="ios-snow-outline"></ion-icon><br />Refrigeracion</ion-col><br />
-          <ion-col col-12 text-center><ion-icon name="ios-thermometer-outline"></ion-icon><br />Climatizacion</ion-col><br />
+          <a href="https://play.google.com/store/apps/details?id=com.leviton.home" ion-col col-12 text-center><ion-icon name="ios-sunny-outline"></ion-icon><br />Iliminacion</a><br />
+          <a href="https://play.google.com/store/apps/details?id=com.dlink.mydlinkmyhome" ion-col col-12 text-center><ion-icon name="ios-snow-outline"></ion-icon><br />Refrigeracion</a><br />
+          <a href="https://play.google.com/store/apps/details?id=com.gwcd.neutral.oem.debang" ion-col col-12 text-center><ion-icon name="ios-thermometer-outline"></ion-icon><br />Climatizacion</a><br />
       </ion-row>
     </ion-grid>
   
 <div padding>
   <h1 text-center color="gris">Consumos</h1>
-  <button ion-button color="naranja" full *ngFor="let i of [1,2,3,4]" (click)="nivel(i)">Nivel {{i}}</button>
+  <a href="http://169.254.0.4" ion-button color="naranja" full *ngFor="let i of [1,2,3,4]" >Nivel {{i}}</a>
 </div>
 </ion-content>

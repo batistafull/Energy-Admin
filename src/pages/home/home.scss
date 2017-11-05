@@ -26,11 +26,12 @@ page-home {
         }
         ion-grid{
           ion-row{
-            ion-col{
+            a{
               font-size:30px;
               border: 1px solid #222;
               border-radius: 10px;
               color: #FF6900;
+              text-decoration: none;
               ion-icon{
                 font-size:90px;
               }
